@@ -12,7 +12,7 @@ fun main() {
     var divideresult = calc.divide(a, b)
     var remainderresult = calc.remainder(a, b)
 
-    println("정수 뺄셈결과: ${subresult}")
+    println("정수 덧셈결과: ${addresult}")
     println("정수 뺄셈결과: ${subresult}")
     println("정수 곱셈결과: ${multiplyresult}")
     println("정수 나눗셈결과: ${divideresult}")
@@ -21,7 +21,6 @@ fun main() {
 }
 
 class Calculator {
-<<<<<<< HEAD
 
     fun add(a: Int, b: Int): Int {
         return a + b
@@ -39,17 +38,3 @@ class Calculator {
         return a % b
     }
 }
-
-
-
-
-
-
-=======
-    var addition:String = ""
-    var hairColor:String = ""
-    var height:Double = 0.0
-    var age:Int = 0
-    var gender:String = ""
-}.
->>>>>>> orgin/master
