@@ -10,4 +10,4 @@ class Calculator {
     var height:Double = 0.0
     var age:Int = 0
     var gender:String = ""
-}
+}.
