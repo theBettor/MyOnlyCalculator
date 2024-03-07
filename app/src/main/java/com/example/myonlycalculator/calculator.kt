@@ -21,6 +21,7 @@ fun main() {
 }
 
 class Calculator {
+<<<<<<< HEAD
 
     fun add(a: Int, b: Int): Int {
         return a + b
@@ -44,3 +45,11 @@ class Calculator {
 
 
 
+=======
+    var addition:String = ""
+    var hairColor:String = ""
+    var height:Double = 0.0
+    var age:Int = 0
+    var gender:String = ""
+}.
+>>>>>>> orgin/master
