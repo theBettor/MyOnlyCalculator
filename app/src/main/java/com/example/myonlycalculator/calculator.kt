@@ -6,35 +6,38 @@ fun main() {
 
     var calc = Calculator()
 
-    var addresult = calc.add(a, b)
-    var subresult = calc.sub(a, b)
-    var multiplyresult = calc.multiply(a, b)
-    var divideresult = calc.divide(a, b)
-    var remainderresult = calc.remainder(a, b)
-
-    println("정수 덧셈결과: ${addresult}")
-    println("정수 뺄셈결과: ${subresult}")
-    println("정수 곱셈결과: ${multiplyresult}")
-    println("정수 나눗셈결과: ${divideresult}")
-    println("정수 나머지결과: ${remainderresult}")
-
+    calc.add(a, b)
+    calc.sub(a, b)
+    calc.multiply(a, b)
+    calc.divide(a, b)
+    calc.remainder(a, b)
 }
 
 class Calculator {
 
     fun add(a: Int, b: Int): Int {
-        return a + b
+        var addresult = a + b
+        println(("정수 덧셈결과: ${addresult}"))
+        return addresult
     }
     fun sub(a: Int, b: Int): Int {
-        return a - b
+        var subresult = a - b
+        println("정수 뺄셈결과: ${subresult}")
+        return subresult
     }
     fun multiply(a: Int, b: Int): Int {
-        return a * b
+        var multiplyresult = a * b
+        println("정수 곱셈결과: ${multiplyresult}")
+        return multiplyresult
     }
     fun divide(a: Int, b: Int): Int {
-        return a / b
+        var divideresult = a / b
+        println("정수 나눗셈결과: ${divideresult}")
+        return divideresult
     }
     fun remainder(a: Int, b: Int): Int {
+        var remainderresult = a % b
+        println("정수 나머지결과: ${remainderresult}")
         return a % b
     }
 }
