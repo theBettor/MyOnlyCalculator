@@ -4,7 +4,7 @@ fun main() {
     var calc = Calculator()
 
     while(true) {
-        println("연산을 시작합니다! 원하시는 연산을 선택하여 주십시오.")
+        println("안녕하세요 연산을 시작합니다! 원하시는 연산을 선택하여 주십시오.")
         println("[1]덧셈, [2]뺄셈, [3]곱셈, [4]나눗셈, [5]나머지, [0]종료")
         val select = readLine()!!.toInt()
         if (select == 0) {
