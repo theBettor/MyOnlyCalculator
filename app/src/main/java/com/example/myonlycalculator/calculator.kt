@@ -15,6 +15,7 @@ package com.example.myonlycalculator
 import android.util.Log
 // Log는 Activity에서만 돌아가는 것 같다.
 fun main() {
+    // mainactivity에서 main으로 바꿨다. 튜터님이 권하기도 했고 이 방법밖에 없었다. 콘솔 쓰려면 액티비티 쓰지마 그냥.
     // Lv1
 // - 연산을 수행할 수 있는 Calculator 클래스를 만들고, 클래스를 이용하여 연산을 진행하고 출력하기
 
@@ -34,7 +35,7 @@ fun main() {
     // 9. 클래스의 인스턴스는 calc이며 Calculator 실행을 위해 인스턴스를 만들어준 것이다.
     var cal = Calculator()
 
-    //- Calculator 함수를 실행한다.
+    //- 10. Calculator 함수를 실행한다.
     val calResult = cal.operate(firstNum, operate, secondNum)
 
 //    Log.d("Mytag", "call result $calResult")
