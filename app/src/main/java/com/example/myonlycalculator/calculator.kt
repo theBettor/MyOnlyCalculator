@@ -78,39 +78,3 @@ class Calculator {
         return result // 함수 내에 결과라는 변수를 만들어 줘서 리턴 값도 필요하다??
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//    fun sub(num1: Int, num2: Int): Int {
-//        var subresult = num1 - num2
-//        println("정수 뺄셈결과: ${subresult}")
-//        return subresult
-//    }
-//    fun multiply(num1: Int, num2: Int): Int {
-//        var multiplyresult = num1 * num2
-//        println("정수 곱셈결과: ${multiplyresult}")
-//        return multiplyresult
-//    }
-//    fun divide(num1: Int, num2: Int): Int {
-//        var divideresult = num1 / num2
-//        println("정수 나눗셈결과: ${divideresult}")
-//        return divideresult
-//    }
-//    fun remainder(num1: Int, num2: Int): Int {
-//        var remainderresult = num1 % num2
-//        println("정수 나머지결과: ${remainderresult}")
-//        return remainderresult
-//    }
