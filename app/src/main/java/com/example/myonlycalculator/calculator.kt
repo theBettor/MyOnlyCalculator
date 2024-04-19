@@ -1,5 +1,7 @@
 package com.example.myonlycalculator
 
+import java.lang.NumberFormatException
+
 // 해결 해야할 것
 // 1. Exception in thread "main" java.lang.NumberFormatException: For input string: "a"
 // while문 안에서나 클래스에서 Int타입 말고 다른 타입의 값을 입력했을때 나오는 오류이다. 예외처리를 통해 처리해주면 좋겠다.
@@ -15,15 +17,41 @@ package com.example.myonlycalculator
 fun main() {
 
     while (true) {
+        val firstNum: Int = 0
+        val operate: Int = 0
+        val secondNum: Int = 0
+
         println("안녕하세요 연산을 시작합니다!")
         println("첫 번째 숫자를 입력 해주세요.")
-        val firstNum: Int = readLine()!!.toInt()
 
+
+        //1 firstNum을 try 안쪽으로 넣었기 때문에 try 내부에서만 firstNum에 접근이 가능한 지역변수가 돼서 Unresolved reference: firstNum 라는 에러까 뜬다.
+        try {
+            val firstNum : Int = readLine()!!.toInt()
+        } catch (e: NumberFormatException) {
+            println("잘못 입력하셨습니다. 숫자를 입력하여 주세요.")
+            println("안녕하세요 연산을 시작합니다!")
+            println("첫 번째 숫자를 입력 해주세요.")
+            val firstNum : Int = readLine()!!.toInt()
+        }
 
         println("연산자를 선택하여 주세요. \n[1]덧셈, [2]뺄셈, [3]곱셈, [4]나눗셈")
-        val operate: Int = readLine()!!.toInt()
+
+        try {
+            val operate: Int = readLine()!!.toInt()
+        } catch (e: NumberFormatException) {
+            println("잘못 입력하셨습니다. 숫자를 입력하여 주세요.")
+            println("연산자를 선택하여 주세요. \n[1]덧셈, [2]뺄셈, [3]곱셈, [4]나눗셈")
+            val operate: Int = readLine()!!.toInt()
+        }
+
         println("두 번째 숫자를 입력 해주세요.")
-        val secondNum: Int = readLine()!!.toInt()
+        try {
+            val secondNum: Int = readLine()!!.toInt()
+        } catch (e: NumberFormatException) {
+            println("잘못 입력하셨습니다. 숫자를 입력하여 주세요.")
+            println("두 번째 숫자를 입력 해주세요.")
+        }
 
         val cal = Calculator()
 
@@ -56,14 +84,23 @@ fun main() {
         }
 
         println("추가 연산을 원하십니까? 원하시면 [0], 종료를 원하시면 아무거나 입력해주세요.")
-        val addoperate: Int = readLine()!!.toInt()
-        if (addoperate == 0) {
-            continue
-        } else {
-            println("프로그램이 종료 됩니다.")
-            break
+
+
+        try {
+            val addoperate: Int = readLine()!!.toInt()
+            if (addoperate == 0) {
+                continue
+            }
+        } catch (e: NumberFormatException) {
+            println("잘못 입력하셨습니다. 숫자를 입력하여 주세요.")
+            println("추가 연산을 원하십니까? 원하시면 [0], 종료를 원하시면 아무거나 입력해주세요.")
+            val addoperate: Int = readLine()!!.toInt()
+            if (addoperate == 0) {
+                continue
+            }
         }
     }
+
 }
 // operate 파라미터는 왜 빼야했던 걸까? 일단 파라미터에 뺏으니까 위에 메인에서 처리하는게 아니라 온전히 연산 클래스에서 처리하겠다는 느낌인가?
 
